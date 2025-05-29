@@ -113,11 +113,3 @@ Retorno esperado:
 ```json
 {"status":"ok"}
 ```
-
-## 🤝 Contribuição
-
-Sinta-se livre para abrir issues, criar pull requests ou sugerir melhorias.
-
-## 📄 Licença
-
-MIT — Feito com 💚 para a ONG Projeto Sementes.

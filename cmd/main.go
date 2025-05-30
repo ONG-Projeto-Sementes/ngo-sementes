@@ -24,21 +24,19 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	// Inicializa o template renderer
 	renderer := &TemplateRenderer{
 		templates: template.Must(template.ParseGlob("views/*.html")),
 	}
 	e.Renderer = renderer
 
-	// Servir arquivos estáticos
 	e.Static("/css", "css")
 	e.Static("/images", "images")
+	e.Static("/svg", "svg")
+	e.Static("/js", "js")
 
-	// Registrar rotas de forma modular nos handlers
 	handlers.RegisterLoginRoutes(e)
 	handlers.RegisterHomeRoutes(e)
 
-	// Health check simples
 	e.GET("/health", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, map[string]string{"status": "ok"})
 	})

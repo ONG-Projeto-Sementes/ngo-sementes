@@ -1,23 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sementes</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="/js/index.js" defer></script>
 </head>
 <body>
 
-    <h1>Login</h1>
+<header class="header">
+    <nav class="nav container">
+        <div class="nav__data">
+            <a href="#" class="nav__logo">
+                <img src="/css/svg/logo.svg" alt="logo" width="50" height="50">
+                <span class="nav__projct__name">Sementes</span>
+            </a>
 
-    <form hx-post="/login" hx-target="#login-response" hx-swap="innerHTML">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Senha:</label>
-        <input type="text" id="password" name="password" required>
-        <br>
-        <button type="submit">Entrar</button>
-    </form>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__burger"></i>
+                <i class="ri-close-line nav__close"></i>
+            </div>
+        </div>
 
-    <div id="login-response"></div>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li><a href="#" class="nav__link">Início</a></li>
+
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                        Cadastros <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li><a href="#" class="dropdown__link"><i class="ri-calendar-line"></i> Eventos</a></li>
+                        <li><a href="#" class="dropdown__link"><i class="ri-heart-line"></i> Doação</a></li>
+                        <li><a href="#" class="dropdown__link"><i class="ri-user-add-line"></i> Voluntários</a></li>
+                        <li><a href="#" class="dropdown__link"><i class="ri-group-line"></i> Pessoas acolhidas</a></li>
+                        <li><a href="#" class="dropdown__link"><i class="ri-box-3-line"></i> Recebimentos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                        Visualizar <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li><a href="#" class="dropdown__link"><i class="ri-calendar-line"></i> Eventos</a></li>
+                        <li><a href="#" class="dropdown__link"><i class="ri-heart-line"></i> Doação</a></li>
+                        <li><a href="#" class="dropdown__link"><i class="ri-user-add-line"></i> Voluntários</a></li>
+                        <li><a href="#" class="dropdown__link"><i class="ri-group-line"></i> Pessoas acolhidas</a></li>
+                        <li><a href="#" class="dropdown__link"><i class="ri-box-3-line"></i> Recebimentos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav__profile">
+            <span class="nav__username">João Silva</span>
+            <i class="ri-account-circle-line nav__avatar"></i>
+        </div>
+    </nav>
+</header>
+
 </body>
 </html>
